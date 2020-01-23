@@ -1,0 +1,53 @@
+<app-home></app-home>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div *ngIf="alreadyContestTaken==false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" [routerLink]="''" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"><b>{{MovieName}} Contest</b> </h4>
+          </div>
+
+          <div *ngIf="questionNumber<5">
+            <div class="questions">
+              <h3> {{questionNumber+1}}. {{data[questionNumber].question}} </h3>
+              <div class="optionsArea">
+                <button class="options" (click)="addAnswer(questionNumber,data[questionNumber].option1);">{{data[questionNumber].option1}}</button>
+                <button class="options" (click)="addAnswer(questionNumber,data[questionNumber].option2);">{{data[questionNumber].option2}}</button>
+                <button class="options" (click)="addAnswer(questionNumber,data[questionNumber].option3);">{{data[questionNumber].option3}}</button>
+                <button class="options" (click)="addAnswer(questionNumber,data[questionNumber].option4);">{{data[questionNumber].option4}}</button>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="contestSuccess==true">
+            <div class="messageBackground">
+              <div class="successMessage">
+                <br>
+                <h3>Hurrah!!! You have successfully completed the contest..</h3>
+                <br><h3> Redeem your below code now</h3>
+              </div>
+              <div class="codeBox">{{successCode}}</div>
+            </div>
+          </div>
+
+          <div *ngIf="contestFailure==true">
+            <div class="failureBackground">
+              <br>
+              <h3> Sorry!!! You have not cleared the contest</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="alreadyContestTaken==true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" [routerLink]="''" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Sorry!! You can take this contest only once..</h4>
+          </div>
+      </div>
+    </div>
+  </div>

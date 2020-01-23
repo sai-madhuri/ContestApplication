@@ -1,0 +1,103 @@
+.modal-content
+  {
+      margin-top:90px;
+      border-radius: 5px;
+      width : 75%;
+      margin-left: 25%;
+      font-weight: bold;
+      font-size: 20px;
+      background-color :  white;
+      font-family: 'Nanum Gothic';
+  }
+  
+  .modal-body
+  {
+    height : 50px;
+    border : 0px;
+    width : 100%;
+    outline: white;
+    background-color: white;
+    padding:0;
+  }
+  
+  .questions
+  {
+    max-height : 500px;
+    overflow: auto;
+  }
+
+  .questions h3{
+    padding-left: 5%;
+  }
+
+  .options
+  {
+    height : 10%;
+    border : 1%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width : 90%;
+    background-color : white;
+    font-family: 'Nanum Gothic';
+    border : 1px groove #989898;
+    border-radius: 3%;
+    margin-top : 2%;
+    margin-left:5%;
+    margin-right : 5%;
+    margin-bottom: 2%;
+    outline:none;
+  }
+
+  .options:hover
+  {
+    border-color :#339CFF;
+  }
+
+  .successImage img
+  {
+    height : 300px;
+    width:100%
+  }
+
+  .messageBackground
+  {
+    background-image: url('https://cdn3.vectorstock.com/i/1000x1000/53/97/confetti-celebration-background-vector-3935397.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top:0%;
+    text-align: center;
+    height : 300px;
+  }
+
+  .successMessage h3
+  {
+    margin-top :0;
+  }
+
+  .codeBox 
+  {
+    text-align: center;
+    border: 2px groove #989898;
+    border-radius : 5%;
+    height : 10%;
+    width : 50%;
+    margin-left : 25%;
+  }
+
+  .successMessage
+  {
+    text-align: center;
+  }
+
+  .failureBackground
+  {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRufQ0FLSwrDV-5qbBthWA-3HRsR0rME0RfFzw4Rm49TAYgUU7QJQ&s');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height : 250px;
+    text-align: center;
+  }
+
+  .failureBackground h3{
+     margin-top:0;
+  }
